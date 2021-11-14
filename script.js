@@ -65,6 +65,9 @@ var quizQuestions = [
     }
 ];
 
+//Answer checking after the showing and hidding of elements right
+//In order to run hidding and running functions when start button is clicked a function needs to be called that itself calls generate questions.
+// writing code that succesffuly shows and hides code.
 //Other variables
 
 var finalQuestionIndex = quizQuestions.length;
@@ -77,7 +80,7 @@ var correct;
 //This function generates the questions and answers.
 
 function generateQuestions() {
-    gameOverEl.setAttribute = "none";
+    // gameOverEl.setAttribute = "none";
     if(currentQuestionIndex === finalQuestionIndex) {
         return showScore();
     }
@@ -213,4 +216,4 @@ function checkAnswer(answer) {
 
 //This button starts the quiz
 
-startBtnEl.addEventListener("click", startQuiz())
+startBtnEl.addEventListener("click", startQuiz)
