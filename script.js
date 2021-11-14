@@ -95,14 +95,14 @@ function generateQuestions() {
 //This function will start the quiz, hide the start button and display the first question.
 
 function startQuiz() {
-    gameOverEl.setAttribute('class', 'hide');
-    startPageEl.removeAttribute('class', 'hide');
+    gameOverEl.style.display = "none";
+    startPageEl.style.display = "none";
     generateQuestions();
 
     //Timer
     timerInterval = setInterval(function() {
         timeLeft--;
-        timerEl.textContent = "Time left: " + timeLeft;
+        timerEl.textContent = timeLeft;
 
         if(timeLeft === 0) {
             clearInterval(timerInterval);
@@ -187,7 +187,7 @@ function clearScore() {
 function replayQuiz() {
     highscoreContainer.setAttribute('class', 'hide');
     gameOverEl.setAttribute('class', 'hide');
-    startPageEl.removeAttribute('class', 'hide');
+    startPageEl.style.display = "none";
     timeLeft = 75;
     score = 0;
     currentQuestionIndex = 0;
