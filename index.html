@@ -6,38 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
-    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+
 </head>
 
 <body>
     <div class="top">
-        <p id="highscore">View Highscores</p>
-        <p id="timer">Time:</p>
+        <div class="scores"><a href="highscore.html">View Highscores</a></div>
+        <div class="timer">Time: <span id="time">0</span></div>
     </div>
 
-    <h1 class="container">Javascript Coding Quiz</h1>
-    <p>Test how well you know Javascript by answering the questions in this quiz. Please note that any incorrect answer
-        will result in a reduction of time/score.</p>
-    <div id="question" class="hide">
-        <div class=answers>
-            <ol>
-                <li
-
-
-            </ul>
+    <div class="container">
+        <div id="startPage"></div>
+        <div class="flex-column flex-center">
+            <h1>Javascript Quiz</h1>
+            <p>Test how well you know Javascript by answering the questions in this quiz. Please note that any incorrect
+                answer will result in a reduction of time/score.</p>
+            <button id="startBtn" class="startBtn">Start Quiz</button>
         </div>
     </div>
 
-
-
-
-
-    <div>
-        <button>start game button</button>
-
-
+    <div id="quiz">
+        <div id="questions">
+            <p>Questions Placeholder</p>
+        </div>
+        <button id="a" onclick="checkAnswer('a')">A</button>
+        <button id="b" onclick="checkAnswer('b')">B</button>
+        <button id="c" onclick="checkAnswer('c')">C</button>
+        <button id="d" onclick="checkAnswer('d')">D</button>
+        <div id="result"></div>
     </div>
-    <script src="Assets/script.js"></script>
+
+    <div id="gameOver">
+        <div id="finalScore"></div>
+        <input type="text" placeholder="enter your initials" name="initials" id="initials" />
+        <button id="submit">Submit</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
